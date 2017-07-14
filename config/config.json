@@ -18,6 +18,7 @@
     "password": null,
     "database": "herokudb",
     "host": "127.0.0.1",
-    "dialect": "postgresql-globular-95284"
+    "dialect": "postgresql-globular-95284",
+    "use_env_variable": "DATABASE_URL"
   }
 }
