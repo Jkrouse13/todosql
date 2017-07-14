@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Todo Heroku</title>
+  </head>
+  <body>
+    <form action="/create" method="post">
+      <h1>ToDo List</h1>
+      <input type="text" name="todo" placeholder="Add a todo...">
+      <button type="submit">Add ToDo</button>
+    </form>
+    <form method="post" action="/done">
+      <h1>Yet to Do</h1>
+      <ul name="list">
+        {{#todos}}
+        <li>
+          {{title}}
+          <button type="submit" name="done" value="{{id}}">
+            Done!
+          </button>
+        </li>
+        {{/todos}}
+      </ul>
+      {{^todos}}
+      <h2>Take a break, you've earned it!</h2>
+      {{/todos}}
+    </form>
+  </body>
+</html>
