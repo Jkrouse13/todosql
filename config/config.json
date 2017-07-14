@@ -18,6 +18,6 @@
     "password": null,
     "database": "herokudb",
     "host": "127.0.0.1",
-    "dialect": "postges"
+    "dialect": "postgres"
   }
 }
