@@ -28,10 +28,7 @@ app.post('/create', function(req, res){
 });
 
 app.post('/done', function(req, res){
-  console.log(req.body);
   models.Todo.destroy({
-  //   completed: new Date()
-  // },{
     where: {
       id: Number(req.body.done)
     }
