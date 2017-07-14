@@ -17,7 +17,7 @@ if (process.env.DATABASE_URL) {
   });
 } else {
   // the application is executed on the local machine
-  sequelize = new Sequelize('postgres:///my_db');
+  sequelize = new Sequelize('postgres:///heroku');
 }
 
 fs
