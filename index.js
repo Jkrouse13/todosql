@@ -28,10 +28,7 @@ app.post('/create', function(req, res){
 });
 
 app.post('/done', function(req, res){
-  console.log(req.body);
   models.Todo.destroy({
-  //   completed: new Date()
-  // },{
     where: {
       id: Number(req.body.done)
     }
@@ -40,6 +37,6 @@ app.post('/done', function(req, res){
   });
 });
 
-app.listen(process.env.PORT || 3000, function(req,res){
+app.listen(3000, function(req,res){
   console.log('Oi!');
 });
